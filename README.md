@@ -1,57 +1,77 @@
-🚀 Multithreaded Thread Pool (C++)
+# 🚀 Multithreaded Thread Pool (C++)
 
-A high-performance multithreaded thread pool implemented in C++17, demonstrating practical concurrency, synchronization, and scalability concepts used in real-world systems.
+A high-performance multithreaded thread pool implemented in C++17, showcasing real-world concurrency, synchronization, and scalability techniques used in systems software.
 
-🔹 What This Project Does
+---
 
-Executes tasks concurrently using a fixed-size thread pool
+## 🔹 Overview
 
-Uses a bounded task queue to apply backpressure
+This project implements a fixed-size thread pool that executes tasks concurrently while ensuring:
 
-Ensures thread safety using mutexes and condition variables
+- Thread safety  
+- Efficient synchronization  
+- Controlled resource usage via bounded queues (backpressure)  
+- Accurate performance measurement  
+- Clean scalability analysis  
 
-Measures performance accurately (no busy-waiting)
+---
 
-Evaluates scalability across multiple thread counts
+## 🧱 High-Level Architecture
 
-🧱 Architecture (High Level)
-Producer → Bounded Task Queue → Worker Threads → Task Completion
+Producer  
+  ↓  
+Bounded Task Queue  
+  ↓  
+Worker Threads (std::thread)  
+  ↓  
+Task Completion Notification  
 
-⚙️ Build & Run
-g++ -std=c++17 src/ThreadPool.cpp src/main.cpp -pthread -O2 -o threadpool
-./threadpool
+---
 
-📊 Performance Snapshot
-Single-thread time : 92 ms
-ThreadPool time   : 27 ms
-Speedup           : ~3.4x
+## ⚙️ Build & Run
 
-Scalability
-Threads	Time (ms)
-1	93
-2	54
-4	44
-8	33
-🧠 Key Concepts Demonstrated
+g++ -std=c++17 src/ThreadPool.cpp src/main.cpp -pthread -O2 -o threadpool  
+./threadpool  
 
-Multithreading & concurrency
+---
 
-Producer–consumer pattern
+## 📊 Performance Snapshot
 
-Bounded queues & backpressure
+Single-thread time : 92 ms  
+ThreadPool time   : 27 ms  
+Speedup           : ~3.4x  
 
-Mutexes and condition variables
+### Scalability
 
-Accurate benchmarking
+Threads | Execution Time (ms)  
+1       | 93  
+2       | 54  
+4       | 44  
+8       | 33  
 
-Scalability analysis
+---
 
-👤 Author
+## 🧠 Concepts Demonstrated
 
-Vignesh S
-Computer Science Undergraduate
-Interests: Systems Programming, Operating Systems, High-Performance Computing
+- Multithreading and concurrency  
+- Producer–consumer pattern  
+- Bounded queues and backpressure  
+- Mutexes and condition variables  
+- Accurate benchmarking  
+- Scalability analysis  
 
-📜 License
+---
 
-Open-source for educational purposes
+## 👤 Author
+
+Vignesh S  
+Computer Science Undergraduate  
+
+Interests:  
+Systems Programming, Operating Systems, High-Performance Computing  
+
+---
+
+## 📜 License
+
+Open-source for educational and learning purposes.
