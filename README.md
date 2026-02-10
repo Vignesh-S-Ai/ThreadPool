@@ -18,16 +18,12 @@ while ensuring **thread safety**, **efficient scheduling**, and **graceful shutd
 
 ## Architecture
 
-```mermaid
-graph TD
-    ThreadPool --> WorkerThreads
-    ThreadPool --> TaskQueue
-    ThreadPool --> Mutex
-    ThreadPool --> ConditionVariable
-    ThreadPool --> GracefulShutdown
-
-
----
+ThreadPool
+├── Worker Threads (std::thread)
+├── Task Queue (std::queue<std::function<void()>>)
+├── Mutex (std::mutex)
+├── Condition Variable (std::condition_variable)
+└── Graceful Shutdown (std::atomic<bool>)
 
 ## Key Components
 
