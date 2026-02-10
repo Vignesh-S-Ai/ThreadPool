@@ -2,17 +2,19 @@
 
 A lightweight and efficient **multithreaded thread pool** implementation in **C++**, built using
 **mutexes, condition variables, and atomic operations**.  
-The project demonstrates core **operating systems and concurrency concepts** used in
-high-performance systems.
+This project demonstrates core **operating systems and concurrency concepts**
+used in high-performance systems.
 
 ---
 
 ## Overview
 
 Thread pools are a fundamental building block in modern software systems such as
-web servers, databases, and runtime engines.  
-This project implements a fixed-size thread pool that executes submitted tasks concurrently
-while ensuring **thread safety**, **efficient scheduling**, and **graceful shutdown**.
+web servers, databases, and runtime engines.
+
+This project implements a **fixed-size thread pool** that executes submitted tasks
+concurrently while ensuring **thread safety**, **efficient scheduling**, and
+**graceful shutdown**.
 
 ---
 
@@ -25,28 +27,31 @@ ThreadPool
 ├── Condition Variable (std::condition_variable)
 └── Graceful Shutdown (std::atomic<bool>)
 
+
+---
+
 ## Key Components
 
-- **Worker Threads**  
-  A fixed number of threads that continuously fetch and execute tasks from the shared queue.
+### Worker Threads
+A fixed number of threads that continuously fetch and execute tasks from the shared queue.
 
-- **Task Queue**  
-  Stores pending jobs submitted to the thread pool.
+### Task Queue
+Stores pending jobs submitted to the thread pool.
 
-- **Mutex & Condition Variable**  
-  Synchronize access to the task queue and prevent busy waiting.
+### Mutex & Condition Variable
+Synchronize access to the task queue and prevent busy waiting.
 
-- **Graceful Shutdown Mechanism**  
-  Ensures all worker threads exit cleanly when the thread pool is destroyed.
+### Graceful Shutdown Mechanism
+Ensures all worker threads exit cleanly when the thread pool is destroyed.
 
 ---
 
 ## Design Decisions
 
-- Used **condition variables** instead of busy-waiting to reduce CPU usage.
-- Protected shared state using **mutex locks** to ensure thread safety.
-- Employed an **atomic flag** to signal shutdown across all worker threads.
-- Followed a **producer–consumer model** for task submission and execution.
+- Used **condition variables** instead of busy waiting to reduce CPU usage
+- Protected shared state using **mutex locks** to ensure thread safety
+- Employed an **atomic flag** to signal shutdown across all worker threads
+- Followed the **producer–consumer model** for task submission and execution
 
 ---
 
@@ -100,4 +105,3 @@ Interests: Systems Programming, Operating Systems, High-Performance Computing
 
 License
 This project is open-source and available for educational and learning purposes.
-
