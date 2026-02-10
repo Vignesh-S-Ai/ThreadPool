@@ -104,27 +104,3 @@ Interests: Systems Programming, Operating Systems, High-Performance Computing
 License
 This project is open-source and available for educational and learning purposes.
 
-
----
-
-## ✅ Why this README is “Google-style”
-
-- Clear **problem statement**
-- Clean **architecture breakdown**
-- Explicit **design decisions**
-- Minimal but precise language
-- Focus on **concepts**, not fluff
-- Easy **build & run** section
-
-This is exactly what recruiters and engineers expect when they open a repo.
-
----
-
-## 🔥 Next power moves (optional but strong)
-If you want, I can:
-1. Add **benchmarking section** with sample numbers  
-2. Tighten this README for **Google/Amazon internship review**
-3. Write **perfect resume bullets** from this project
-4. Plan your **next systems project** (memory allocator / LRU cache)
-
-Just tell me what you want to level up next, Honey 👊💙
