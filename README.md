@@ -23,7 +23,7 @@ ThreadPool
 ├── Task Queue (std::queue<std::function<void()>>)
 ├── Mutex (std::mutex)
 ├── Condition Variable (std::condition_variable)
-└── Graceful Shutdown (std::atomic<bool>)
+└── Graceful Shutdown (std::atomic<bool
 
 
 ---
