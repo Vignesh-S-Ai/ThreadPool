@@ -11,15 +11,18 @@
 
 class ThreadPool {
 private:
-    std::vector<std::thread> workers;   // Worker Threads
-    std::queue<std::function<void()>> tasks; // Task Queue
+    std::vector<std::thread> workers;
+    std::queue<std::function<void()>> tasks;
 
-    std::mutex queueMutex;              // Mutex
-    std::condition_variable condition;  // Condition Variable
-    std::atomic<bool> stop;             // Graceful Shutdown
+    std::mutex queueMutex;
+    std::condition_variable notEmpty;
+    std::condition_variable notFull;
+
+    std::atomic<bool> stop;
+    size_t maxQueueSize;
 
 public:
-    ThreadPool(size_t threads);
+    ThreadPool(size_t threads, size_t maxQueueSize = 16);
     void enqueue(std::function<void()> task);
     ~ThreadPool();
 };
