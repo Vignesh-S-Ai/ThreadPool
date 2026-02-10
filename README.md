@@ -61,6 +61,7 @@ Ensures all worker threads exit cleanly when the thread pool is destroyed.
 - C++17 compatible compiler
 - POSIX thread support
 
+
 ### Compile
 ```bash
 g++ -std=c++17 src/ThreadPool.cpp src/main.cpp -pthread -O2 -o threadpool
@@ -101,7 +102,14 @@ Thread affinity and CPU pinning
 Author
 Vignesh S
 Computer Science Undergraduate
-Interests: Systems Programming, Operating Systems, High-Performance Computing
+
+Interests
+
+Systems Programming
+
+Operating Systems
+
+High-Performance Computing
 
 License
 This project is open-source and available for educational and learning purposes.
